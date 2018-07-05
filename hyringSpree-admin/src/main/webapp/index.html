@@ -1,0 +1,428 @@
+<html  ng-app="hyringSpreeApp" lang="en">
+  <head>
+<title>Insert title here</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./resources/assets/css/bootstrap.min.css">
+<script src="./resources/assets/js/jquery.min.js"></script>
+<script src="./resources/assets/js/bootstrap.min.js"></script>
+<link href="./resources/assets/css/font.css" rel='stylesheet'
+	type='text/css'>
+<!-- Iconos -->
+<link
+	href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+	href="./resources/assets/css/style.css">
+
+<!-- ANGULAR JS -->
+<script type="text/javascript" src="resources/js/angular/angular.min.js"></script>
+<script type="text/javascript" src="resources/js/angular/angular-route.js"></script>
+
+<script type="text/javascript" src="resources/view/app/app.js"></script>
+<script type="text/javascript" src="resources/view/auth/login/loginCtrl.js"></script>
+<script type="text/javascript" src="resources/view/auth/login/loginService.js"></script>
+<script type="text/javascript" src="resources/view/auth/forgetPassword/forgetModule.js"></script>
+<script type="text/javascript" src="resources/view/auth/forgetPassword/forgetCtrl.js"></script>
+<script type="text/javascript" src="resources/view/auth/forgetPassword/forgetService.js"></script>
+<script type="text/javascript" src="resources/view/auth/homePage/homeModule.js"></script>
+<script type="text/javascript" src="resources/view/auth/homePage/homeCtrl.js"></script>
+<script type="text/javascript" src="resources/view/auth/signUp/signUpModule.js"></script>
+<script type="text/javascript" src="resources/view/auth/signUp/signUpCtrl.js"></script>
+
+
+
+
+
+<!-- BASE URL -->
+  <base href="http://localhost:8086/hyringSpree-admin/">
+</head>
+   <body id="overflow">
+      <!-- Navbar -->
+      <nav class="navbar navbar  navbar-fixed-top bg">
+         <div class="container">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="index.html"><img src="./resources/assets/images/hyring-spree-logo.png" class="img-logo"></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right fr">
+               <li class="head-country"><a class="menu-country"><img src="./resources/assets/images/location-icon.png" class="mt-5"> USA</a></li>
+               <li><a href="#/login" class="sign-in mt0">SIGN IN</a></li>
+               <li><a href="sign-up.html"><button class="btn sign-up sign-up-mob"> SIGN UP</button></a></li>
+            </ul>
+         </div>
+      </nav>
+      <div ng-view></div>
+    
+            
+      <div class="container-fluid no-padding section-4 hero-left sign-footer">
+         <div class="col-sm-12 col-xs-12 plr0">
+            <div class="Container">
+               <div class="col-md-5 col-sm-6 col-xs-12">
+                  <div class="media">
+                     <div class="media-left">
+                        <img src="./resources/assets/images/subscribe-icon.png" class="media-object" style="width:60px">
+                     </div>
+                     <div class="media-body">
+                        <p>Sign Up for the Latest Industry News,Tips and Advice</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-7 col-sm-6 col-xs-12">
+                  <div class="input-group email-block">
+                     <input id="email" type="text" class="form-control" name="email" placeholder="Your Email Address">
+                     <span class="input-group-addon btn subcribe-button">SUBSCRIBE</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Footer -->
+      <footer>
+         <div class="footer-section">
+         <div class="container ">
+            <div class="row">
+               <div class="col-md-3  col-sm-6 col-xs-6"  >
+                  <ul class="directories footer">
+                     <span>For Job Seekers</span>    
+                     <li>
+                        <a href="#">Find Jobs</a>
+                     </li>
+                     <li>
+                        <a href="#">Upload Resume</a>
+                     </li>
+                     <li>
+                        <a href="#">Sign In</a>
+                     </li>
+                     <li>
+                        <a href="#">Sign UP</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-md-3 col-sm-6 col-xs-6"  >
+                  <ul class="nnouncements footer" >
+                     <span>For Employers</span>    
+                     <li>
+                        <a href="#">Post Jobs</a>
+                     </li>
+                     <li>
+                        <a href="#">Browse Resumes</a>
+                     </li>
+                     <li>
+                        <a href="#">Sign In</a>
+                     </li>
+                     <li>
+                        <a href="#">Sign Up</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-md-3 col-sm-6 col-xs-6"  >
+                  <ul class="magazines footer">
+                     <span>About Us</span>    
+                     <li>
+                        <a href="about-us.html">About Hyring Spree</a>
+                     </li>
+                     <li>
+                        <a href="contact-us.html">Contact Us</a>
+                     </li>
+                     <li>
+                        <a href="#">Customers</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-md-3 col-sm-6 col-xs-6"  >
+                  <ul class="others footer">
+                     <span>Resources</span>    
+                     <li>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                     </li>
+                     <li>
+                        <a href="terms-use.html">Terms of Use</a>
+                     </li>
+                     <li>
+                        <a href="#">Help</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer-divider col-md-12 col-sm-12 col-xs-12"></div>
+               <div class="col-md-6 col-sm-6 col-xs-12">
+                  <ul class="social-footer">
+                     <li>
+                        <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="col-md-6 col-sm-6 col-xs-12 pull-right">
+                  <p class="copy-right">Copyright © 2017 - Hyring Spree</p>
+               </div>
+            </div>
+         </div>
+         <div class="footer">
+      </footer>
+      <!-- Refine result mobile view code -->
+      <section class="footer1 container-fluid search-result-button">
+         <div class="row" >
+            <div class="col-xs-12 foo-icon-sec">
+               <button class="btn btn-block" id="three" onclick="openNav()">FILTER</button>
+            </div>
+         </div>
+      </section>
+      <div id="mySidenav" class="sidenav-fil">
+         <div class="Container">
+            <div class="col-xs-12">
+               <ul id="accordion1" class="accordion1">
+                  <div class="submenu-head mt-45-mob">REFINE RESULTS</div>
+                  <hr>
+                  <li class="default open"">
+                     <div class="link">POSTED<i class="fa fa-chevron-down"></i></div>
+                     <ul class="submenu">
+                        <div class="md-checkbox">
+                           <input id="r1" type="checkbox">
+                           <label for="r1">Today</label>
+                        </div>
+                        <div class="md-checkbox">
+                           <input id="r11" type="checkbox">
+                           <label for="r11">This Week</label>
+                        </div>
+                        <div class="md-checkbox">
+                           <input id="r12" type="checkbox">
+                           <label for="r12">This Month</label>
+                        </div>
+                     </ul>
+                  </li>
+                  <hr>
+                  <li>
+                     <div class="link">LOCATION<i class="fa fa-chevron-down"></i></div>
+                     <ul class="submenu">
+                        <div class="md-checkbox">
+                           <input id="r13" type="checkbox">
+                           <label for="r13">Texas</label>
+                        </div>
+                        <div class="md-checkbox">
+                           <input id="r14" type="checkbox">
+                           <label for="r14">New Jersey</label>
+                        </div>
+                        <div class="md-checkbox">
+                           <input id="r15" type="checkbox">
+                           <label for="r15">New York</label>
+                        </div>
+                     </ul>
+                  </li>
+                  <hr>
+                  <li>
+                     <div class="link">EMPLOYMENT TYPE<i class="fa fa-chevron-down"></i></div>
+                     <ul class="submenu">
+                        <div class="md-checkbox">
+                           <input id="r16" type="checkbox">
+                           <label for="r16">Developer</label>
+                        </div>
+                        <div class="md-checkbox">
+                           <input id="r17" type="checkbox">
+                           <label for="r17">Designer</label>
+                        </div>
+                        <div class="md-checkbox">
+                           <input id="r18" type="checkbox">
+                           <label for="r18">Tester</label>
+                        </div>
+                     </ul>
+                  </li>
+                  <hr>
+                  <li>
+                     <div class="link">INDUSTRY<i class="fa fa-chevron-down"></i></div>
+                     <ul class="submenu">
+                        <div class="md-checkbox">
+                           <input id="r19" type="checkbox">
+                           <label for="r19">Google</label>
+                        </div>
+                        <div class="md-checkbox">
+                           <input id="r10" type="checkbox">
+                           <label for="r10">Bing</label>
+                        </div>
+                        <div class="md-checkbox">
+                           <input id="r1a" type="checkbox">
+                           <label for="r1a">Yahoo</label>
+                        </div>
+                     </ul>
+                  </li>
+                  <hr>
+               </ul>
+            </div>
+         </div>
+         <div class="row" >
+            <div class="col-xs-6 foo-icon-sec">
+               <button class="btn btn-block" id="one" onclick="closeNav()">CANCEL</button>
+            </div>
+            <div class="col-xs-6 foo-icon-sec">
+               <button class="btn btn-block" id="two" onclick="closeNav()">REFINE RESULT</button>
+            </div>
+         </div>
+      </div>
+      <!-- End Refine result mobile view code -->
+      <script>
+         document.getElementById("one").style.display = "none";
+           document.getElementById("two").style.display = "none";
+         function openNav() {
+          document.getElementById("mySidenav").style.height = "100vh";
+          document.getElementById("overflow").style.overflow = "hidden";
+          document.getElementById("one").style.display = "block";
+          document.getElementById("two").style.display = "block";
+         
+         }
+         
+         function closeNav() {
+          document.getElementById("mySidenav").style.height = "0";
+          document.getElementById("overflow").style.overflow = "auto";
+          document.getElementById("one").style.display = "none";
+          document.getElementById("two").style.display = "none";
+         }
+      </script>
+      <script src="./resources/assets/js/index.js"></script>
+      <script src="./resources/assets/js/jquery1.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function(){
+             function getPageList(totalPages, page, maxLength) {
+         if (maxLength < 5) throw "maxLength must be at least 5";
+         
+         function range(start, end) {
+             return Array.from(Array(end - start + 1), (_, i) => i + start); 
+         }
+         
+         var sideWidth = maxLength < 9 ? 1 : 2;
+         var leftWidth = (maxLength - sideWidth*2 - 3) >> 1;
+         var rightWidth = (maxLength - sideWidth*2 - 2) >> 1;
+         if (totalPages <= maxLength) {
+             // no breaks in list
+             return range(1, totalPages);
+         }
+         if (page <= maxLength - sideWidth - 1 - rightWidth) {
+             // no break on left of page
+             return range(1, maxLength-sideWidth-1)
+                 .concat([0])
+                 .concat(range(totalPages-sideWidth+1, totalPages));
+         }
+         if (page >= totalPages - sideWidth - 1 - rightWidth) {
+             // no break on right of page
+             return range(1, sideWidth)
+                 .concat([0])
+                 .concat(range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages));
+         }
+         // Breaks on both sides
+         return range(1, sideWidth)
+             .concat([0])
+             .concat(range(page - leftWidth, page + rightWidth)) 
+             .concat([0])
+             .concat(range(totalPages-sideWidth+1, totalPages));
+         }
+         
+         $(function () {
+         // Number of items and limits the number of items per page
+         var numberOfItems = $("#jar .content").length;
+         var limitPerPage = 2;
+         // Total pages rounded upwards
+         var totalPages = Math.ceil(numberOfItems / limitPerPage);
+         // Number of buttons at the top, not counting prev/next,
+         // but including the dotted buttons.
+         // Must be at least 5:
+         var paginationSize = 5; 
+         var currentPage;
+         
+         function showPage(whichPage) {
+             if (whichPage < 1 || whichPage > totalPages) return false;
+             currentPage = whichPage;
+             $("#jar .content").hide()
+                 .slice((currentPage-1) * limitPerPage, 
+                         currentPage * limitPerPage).show();
+             // Replace the navigation items (not prev/next):            
+             $(".pagination li").slice(1, -1).remove();
+             getPageList(totalPages, currentPage, paginationSize).forEach( item => {
+                 $("<li>").addClass("page-item")
+                          .addClass(item ? "current-page" : "disabled")
+                          .toggleClass("active", item === currentPage).append(
+                     $("<a>").addClass("page-link").attr({
+                         href: "javascript:void(0)"}).text(item || "...")
+                 ).insertBefore("#next-page");
+             });
+             // Disable prev/next when at first/last page:
+             $("#previous-page").toggleClass("disabled", currentPage === 1);
+             $("#next-page").toggleClass("disabled", currentPage === totalPages);
+             return true;
+         }
+         
+         // Include the prev/next buttons:
+         $(".pagination").append(
+             $("<li>").addClass("page-item").attr({ id: "previous-page" }).append(
+                 $("<a>").addClass("page-link").attr({
+                     href: "javascript:void(0)"}).text("Prev")
+             ),
+             $("<li>").addClass("page-item").attr({ id: "next-page" }).append(
+                 $("<a>").addClass("page-link").attr({
+                     href: "javascript:void(0)"}).text("Next")
+             )
+         );
+         // Show the page links
+         $("#jar").show();
+         showPage(1);
+         
+         // Use event delegation, as these items are recreated later    
+         $(document).on("click", ".pagination li.current-page:not(.active)", function () {
+             return showPage(+$(this).text());
+         });
+         $("#next-page").on("click", function () {
+             return showPage(currentPage+1);
+         });
+         
+         $("#previous-page").on("click", function () {
+             return showPage(currentPage-1);
+         });
+         });
+         });
+      </script>
+      <!-- button filter-->
+      <script>
+         var x = document.getElementById("open-btn");
+         x.addEventListener("click", onButton);
+         function onButton() {
+         document.getElementById("overlay").style.display = "block";
+         document.getElementById("overlay").style.height = "100%";
+         }
+         
+         var x = document.getElementById("close-btn");
+         x.addEventListener("click", offButton);
+         function offButton() 
+         {
+         document.getElementById("overlay").style.display = "none"; 
+         document.getElementById("overlay").style.height = "0%";   
+         }
+         
+         
+      </script>
+      <script>
+         var navWrap = $('#navWrap'),
+             nav = $('.hello'),
+             startPosition = navWrap.offset().top,
+             stopPosition = $('#stopHere').offset().top - nav.outerHeight();
+         
+         $(document).scroll(function () {
+             //stick nav to top of page
+             var y = $(this).scrollTop()
+             
+             if (y > startPosition) {
+                 nav.addClass('sticky');
+                 if (y > stopPosition) {
+                     nav.css('top', stopPosition - y);
+                 } else {
+                     nav.css('top', 0);
+                 }
+             } else {
+                 nav.removeClass('sticky');
+             } 
+         });
+      </script>
+      <!--- end -->
+   </body>
+</html>
